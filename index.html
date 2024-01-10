@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apple Pie Recipe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #333;
+        }
+
+        .header {
+            background-color: #f8ceaa;
+            padding: 10px 20px;
+            text-align: center;
+            color: #c23b24;
+        }
+
+        .recipe-container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #f8ceaa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+
+        .ingredient, .instruction {
+            background-color: #f5a524;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            color: #3e6e3a;
+        }
+
+        .ingredient:hover, .instruction:hover {
+            background-color: #8dc63f;
+            cursor: pointer;
+        }
+
+        .highlight {
+            background-color: #c23b24;
+            color: white;
+        }
+    </style>
+    <script>
+        function highlight(element) {
+            element.classList.toggle("highlight");
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Delicious Apple Pie Recipe</h1>
+    </div>
+
+    <div class="recipe-container">
+        <h2>Ingredients</h2>
+        <div class="ingredient" onclick="highlight(this)">1 tablespoon granulated sugar</div>
+        <div class="ingredient" onclick="highlight(this)">200 g of softened butter</div>
+        <!-- More ingredients here -->
+        
+        <h2>Preparation</h2>
+        <div class="instruction" onclick="highlight(this)">1. Mix sugar, butter, sour cream, and egg.</div>
+        <div class="instruction" onclick="highlight(this)">2. Gradually add flour.</div>
+        <!-- More instructions here -->
+    </div>
+</body>
+</html>
