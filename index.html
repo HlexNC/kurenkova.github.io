@@ -10,40 +10,17 @@
         body {
             font-family: 'Patrick Hand SC', cursive;
             background-color: #fff8e7;
-            /* light peach background */
             margin: 0;
             padding: 20px;
             color: #333;
         }
 
-        h1 {
-            color: #c23b24;
-            /* Tall Poppy for titles */
-            text-align: center;
+        .header {
+            display: flex;
+            align-items: center;
+            position: relative;
         }
 
-        h2 {
-            color: #c23b24;
-            /* Tall Poppy for subtitles */
-            margin-top: 30px;
-        }
-
-        .ingredient,
-        .step {
-            background-color: #f5a524;
-            /* Buttercup yellow for boxes */
-            color: #fff;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-        }
-
-        .step {
-            background-color: #8dc63f;
-            /* Sushi green for step boxes */
-        }
-
-        /* Add styles for the button and icon */
         .toggle-button {
             position: relative;
             left: 0;
@@ -53,7 +30,6 @@
             padding: 10px;
             border-radius: 5px;
             background-color: #f5a524;
-            /* Buttercup yellow for button background */
             font-family: 'Patrick Hand SC', cursive;
             color: #fff;
             font-size: 20px;
@@ -64,42 +40,74 @@
             /* Sushi green for button background */
         }
 
-        .toggle-content {
-            transition: max-height 0.5s ease-in-out;
-            /* smooth folding animation */
-            max-height: 1000px;
-            /* arbitrary large number */
-            overflow: hidden;
+        h1 {
+            color: #c23b24;
+            text-align: center;
+        }
+
+        h2 {
+            color: #c23b24;
+            margin-top: 30px;
             margin-left: 30px;
         }
 
-        .hidden {
+        .content {
             max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+            margin-left: 30px;
+        }
+
+        .ingredient,
+        .step {
+            background-color: #f5a524;
+            color: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .step {
+            background-color: #8dc63f;
         }
     </style>
-    <script>
-        function toggleContent(id) {
-            var content = document.getElementById(id);
-            content.classList.toggle('hidden');
-        }
-    </script>
 </head>
 
 <body>
     <h1>Apple Pie Recipe</h1>
-    <h2><button class="toggle-button" onclick="toggleContent('ingredients')">+</button> Ingredients</h2>
-    <div id="ingredients" class="toggle-content">
+
+    <div class="header">
+        <button class="toggle-button" onclick="toggleSection('ingredients', this)">+</button>
+        <h2>Ingredients</h2>
+    </div>
+    <div id="ingredients" class="content">
         <div class="ingredient">1 tablespoon granulated sugar</div>
         <div class="ingredient">200 g of softened butter</div>
         <!-- Add more ingredients as needed -->
     </div>
 
-    <h2><button class="toggle-button sushi" onclick="toggleContent('preparation')">+</button> Preparation</h2>
-    <div id="preparation" class="toggle-content">
+    <div class="header">
+        <button class="toggle-button sushi" onclick="toggleSection('preparation', this)">+</button>
+        <h2>Preparation</h2>
+    </div>
+    <div id="preparation" class="content">
         <div class="step">1. Mix sugar, butter, sour cream, and egg.</div>
         <div class="step">2. Gradually add flour.</div>
         <!-- Add more steps as needed -->
     </div>
+
+    <script>
+        function toggleSection(sectionId, btn) {
+            var section = document.getElementById(sectionId);
+            if (section.style.maxHeight) {
+                section.style.maxHeight = null;
+                btn.textContent = '+';
+            } else {
+                section.style.maxHeight = section.scrollHeight + "px";
+                btn.textContent = '-';
+            }
+        }
+    </script>
 </body>
 
 </html>
