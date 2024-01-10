@@ -140,6 +140,11 @@
                 btn.textContent = '-';
             }
         }
+
+        window.onload = function() {
+            var preparationButton = document.querySelector('.toggle-button.sushi');
+            toggleSection('preparation', preparationButton);
+        }
     </script>
 </body>
 
