@@ -70,32 +70,63 @@
         .step {
             background-color: #8dc63f;
         }
+
+        .main-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .content-container {
+            /* Adjust width as needed */
+            width: 50%;
+        }
+
+        .recipe-image {
+            width: 40%;
+            /* Fixed width */
+            /* Maintain aspect ratio */
+            align-items: center;
+            /* Add some margin */
+        }
     </style>
 </head>
 
 <body>
     <h1>Apple Pie Recipe</h1>
 
-    <div>
-        <div class="header">
-            <button class="toggle-button" onclick="toggleSection('ingredients', this)">+</button>
-            <h2>Ingredients</h2>
-        </div>
-        <div id="ingredients" class="content">
-            <div class="ingredient">1 tablespoon granulated sugar</div>
-            <div class="ingredient">200 g of softened butter</div>
-            <!-- Add more ingredients as needed -->
-        </div>
+    <div class="main-container">
+        <div class="content-container">
+            <div class="header">
+                <button class="toggle-button" onclick="toggleSection('ingredients', this)">+</button>
+                <h2>Ingredients</h2>
+            </div>
+            <div id="ingredients" class="content">
+                <div class="ingredient">1 tablespoon granulated sugar</div>
+                <div class="ingredient">200 g of softened butter</div>
+                <div class="ingredient">200 g of sour cream</div>
+                <div class="ingredient">1 egg</div>
+                <div class="ingredient">Flour (approximately 13-15 tablespoons)</div>
+                <div class="ingredient">6 round apples (preferably sweet and soft)</div>
+                <div class="ingredient">6 tablespoons granulated sugar (for sprinkling on the apples)</div>
+            </div>
 
-        <div class="header">
-            <button class="toggle-button sushi" onclick="toggleSection('preparation', this)">+</button>
-            <h2>Preparation</h2>
+            <div class="header">
+                <button class="toggle-button sushi" onclick="toggleSection('preparation', this)">+</button>
+                <h2>Preparation</h2>
+            </div>
+            <div id="preparation" class="content">
+                <div class="step">1. Mix sugar, butter, sour cream, and egg.</div>
+                <div class="step">2. Gradually add flour.</div>
+                <div class="step">3. Place the dough on cling film and shape it into a round ball or a long brick.</div>
+                <div class="step">4. Peel the apples and grate them coarsely, squeeze out the juice.</div>
+                <div class="step">5. Divide the dough into two parts. Roll out one part and place it on a baking sheet.</div>
+                <div class="step">6. Lay the grated apples on top of the dough and sprinkle them with 6 tablespoons of sugar.</div>
+                <div class="step">7. Cover the apples with the second part of the dough, pinch the edges. Make several holes in the top part of the dough with a fork and one round hole in the center.</div>
+                <div class="step">8. Bake at 180°C (356°F) for approximately 25-30 minutes.</div>
+            </div>
         </div>
-        <div id="preparation" class="content">
-            <div class="step">1. Mix sugar, butter, sour cream, and egg.</div>
-            <div class="step">2. Gradually add flour.</div>
-            <!-- Add more steps as needed -->
-        </div>
+        <img src="./apple_pie_pxArt.png" alt="Apple Pie" class="recipe-image">
     </div>
 
     <script>
