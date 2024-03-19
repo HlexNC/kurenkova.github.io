@@ -1,0 +1,47 @@
+{
+  "_comment": "Bilingual (English/Russian) recipe for Apple Pie",
+  "recipe": {
+    "title": {
+      "en": "Apple Pie",
+      "ru": "Яблочный пирог"
+    },
+    "description": {
+      "en": "A classic recipe for a delicious apple pie, perfect for any occasion.",
+      "ru": "Классический рецепт вкусного яблочного пирога, идеально подходит для любого случая."
+    },
+    "ingredients": {
+      "en": [
+        "1 tablespoon of granulated sugar",
+        "200g of softened butter (take out of the fridge beforehand to soften)",
+        "200g of sour cream",
+        "1 egg",
+        "Flour (start with 5 tablespoons, mix, then another 5 tablespoons, mix again. Add another 3 to 5 tablespoons, for a total of 13 to 15 tablespoons), until dough forms"
+      ],
+      "ru": [
+        "1 столовая ложка сах. песка",
+        "200 гр. слив масла (предварительно масло вынуть из холодильника, чтобы оно стало мягким)",
+        "200гр. сметаны",
+        "1 яйцо",
+        "Добавить муку, сначала 5 столовых ложек, перемешать, потом еще 5 столовых ложек, перемешать. Добавить еще 3/5 ложек муки (всего 13/15 ложек муки), до образования теста"
+      ]
+    },
+    "preparation": {
+      "en": [
+        "Mix sugar, butter, sour cream, and egg together.",
+        "Gradually add flour as described in the ingredients, until the dough forms. Place the dough on cling film, shape it into a round ball or a long brick, wrap it in the film, and refrigerate. The dough can be stored in the fridge for 2 to 3 days.",
+        "Peel 6 round apples (preferably sweet and soft), grate them coarsely, and squeeze out the juice (you might get a whole cup of apple juice).",
+        "Divide the dough into two parts. Roll out one part and place it on a baking sheet. Lay the grated apples on top and sprinkle them with 6 tablespoons of granulated sugar.",
+        "Cover with the second part of the dough, pinch the edges. Make several holes in the top part of the dough with a fork and one round hole in the center to prevent the pie from leaking.",
+        "Bake at 180°C (356°F) for approximately 25 to 30 minutes."
+      ],
+      "ru": [
+        "Все это перемешивать.",
+        "Добавить муку, как описано в ингредиентах, до образования теста. Выложить его на пленку, сформировать из теста круглый комок или продолговатый брусок, завернуть в пленку и положить в холодильник. Тесто может храниться в холодильнике 2+3 дня.",
+        "6 круглых яблок (желательно сладких и мягких), очистить, натереть на крупной терке, отжать (может получиться целая чашка яблочного сока).",
+        "Тесто делим на 2 части. Раскатать одну часть, положить на противень. Сверху положить яблоки и посыпать их сах. песком - 6 столовых ложек.",
+        "Сверху вторая часть теста, защепить края, в верхней части сделать дырочки вилкой и одну в середине круглую дырочку (чтобы пирог не потек).",
+        "Выпекать при 180°C, примерно 25/30 мин."
+      ]
+    }
+  }
+}
